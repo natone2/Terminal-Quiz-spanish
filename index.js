@@ -1,87 +1,89 @@
 const readline = require("readline");
 
-const fragen = [
+const preguntas = [
   {
-    frage:
-      "Wie viele Weihnachtsbäume werden in Deutschland pro Jahr verkauft? 🎄",
-    antworten: [
-      " Etwa 30 Millionen",
-      " Etwa 60 Millionen",
-      " Etwa 45 Millionen",
-    ],
-    richtigeAntwort: "Etwa 30 Millionen",
+    pregunta: "¿Cuántos países forman parte de la Unión Europea? 🇪🇺",
+    respuestas: [" 27", " 28", " 30"],
+    respuestaCorrecta: "27",
   },
 
   {
-    frage:
-      "Wie viele Liter Bier werden in Deutschland pro Kopf jährlich getrunken? 🍺",
-    antworten: [" 10 Liter", " 100 Liter", " 50 Liter"],
-    richtigeAntwort: "100 Liter",
+    pregunta: "¿En qué año se estrenó la película 'El Padrino'? 🎥",
+    respuestas: [" 1972", " 1980", " 1969"],
+    respuestaCorrecta: "1972",
   },
 
   {
-    frage: "Wer war während des 2. Weltkriegs US-Präsident? 🦅🔫",
-    antworten: [
-      " John F. Kennedy",
-      " Theodore Roosevelt ",
-      " Franklin D. Roosevelt",
-    ],
-    richtigeAntwort: " Franklin D. Roosevelt ",
+    pregunta: "¿Quién escribió 'El manifiesto comunista'? 📜",
+    respuestas: [" Karl Marx y Friedrich Engels", " Karl Marx", " Friedrich Engels"],
+    respuestaCorrecta: "Karl Marx y Friedrich Engels",
   },
 
   {
-    frage: "Welches Land ist flächenmäßig das zweitgrößte der Erde? 🗺️",
-    antworten: [" Kanada", " USA", " China"],
-    richtigeAntwort: "Kanada",
+    pregunta: "¿Cuál es la capital de España? 🏙️",
+    respuestas: [" Madrid", " Barcelona", " Sevilla"],
+    respuestaCorrecta: "Madrid",
   },
 
   {
-    frage: "Wie viele Tasten hat ein Klavier? 🎹",
-    antworten: [" 80", " 88", " 78"],
-    richtigeAntwort: "88",
+    pregunta: "¿Cuántos bits tiene un byte? 💾",
+    respuestas: [" 8", " 16", " 4"],
+    respuestaCorrecta: "8",
   },
 
   {
-    frage: "In welchem Jahr war die Einführung des Euro in Deutschland? 💶",
-    antworten: [" 2003", " 2004", " 2002"],
-    richtigeAntwort: "2002",
+    pregunta: "¿Quién dirigió la película 'Parásitos'? 🎬",
+    respuestas: [" Bong Joon-ho", " Park Chan-wook", " Kim Ki-duk"],
+    respuestaCorrecta: "Bong Joon-ho",
+  },
+
+  {
+    pregunta: "¿En qué año comenzó la Guerra Civil Española? ⚔️",
+    respuestas: [" 1936", " 1939", " 1945"],
+    respuestaCorrecta: "1936",
+  },
+
+  {
+    pregunta: "¿Qué filósofo dijo 'Pienso, luego existo'? 🤔",
+    respuestas: [" René Descartes", " Sócrates", " Kant"],
+    respuestaCorrecta: "René Descartes",
   },
 ];
-let punkte = 0;
 
-function quiz(fragenObj, index) {
-  let option = fragenObj.antworten
-    .map((fragenObj) => {
-      return fragenObj;
- });
+let puntos = 0;
+
+function quiz(preguntaObj, index) {
+  let opciones = preguntaObj.respuestas.map((opcion) => opcion);
 
   console.log(
-    `\nFrage: ${index + 1} 🔥\n${
-      fragenObj.frage
-    }\nAntwortmöglichkeiten:${option}`
+    `\nPregunta ${index + 1}: 🔥\n${preguntaObj.pregunta}\nOpciones:${opciones}`
   );
+
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
   });
-  rl.question("Dein Antwort: ", (answer) => {
+
+  rl.question("Tu respuesta: ", (respuesta) => {
     rl.close();
-    if (answer === fragenObj.richtigeAntwort) {
-      console.log("\nRichtig! 🥳");
-      punkte += 5;
+
+    if (respuesta.trim() === preguntaObj.respuestaCorrecta) {
+      console.log("\n¡Correcto! 🥳");
+      puntos += 5;
     } else {
       console.log(
-        `\nDein Antwort ist leider falsch 👎 Das richtige Antwort ist ${fragenObj.richtigeAntwort}`
+        `\nRespuesta incorrecta 👎 La respuesta correcta es: ${preguntaObj.respuestaCorrecta}`
       );
     }
 
-    if (index < fragen.length - 1) {
-      quiz(fragen[index + 1], index + 1, punkte);
+    if (index < preguntas.length - 1) {
+      quiz(preguntas[index + 1], index + 1);
     } else {
       console.log(
-        `\nDu bist du durch, du Maschine! 🦾 Du hast ${punkte} Punkte bekommen.`
+        `\n¡Has terminado el juego! 🎉 Obtuviste ${puntos} puntos. ¡Bien hecho! 🦾`
       );
     }
   });
 }
-quiz(fragen[0], 0);
+
+quiz(preguntas[0], 0);
