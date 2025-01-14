@@ -2,6 +2,8 @@
 
 ## About Project
 
+This is a translation of the original code from: https://github.com/LouiseSchultz/Terminal-Quiz
+
 The Terminal Quiz is a command-line application via which users can take a quiz. It provides an interactive and engaging way to test your knowledge on various trivia questions.
 
 
