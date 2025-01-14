@@ -40,7 +40,91 @@ const preguntas = [
     respuestas: ["Kant", "René Descartes", "Sócrates"],
     respuestaCorrecta: 2,
   },
-  // Agrega el resto de las preguntas aquí
+  {
+    pregunta: "¿Qué gas respiramos los humanos? 🌬️",
+    respuestas: ["Hidrógeno", "Oxígeno", "Nitrógeno"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿Qué deporte practica Rafael Nadal? 🎾",
+    respuestas: ["Baloncesto", "Tenis", "Fútbol"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿En qué país se encuentra la Torre Eiffel? 🗼",
+    respuestas: ["Alemania", "Francia", "Italia"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿En qué año cayó el Muro de Berlín? 🧱",
+    respuestas: ["1987", "1989", "1990"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿Quién escribió 'El manifiesto comunista'? 📜",
+    respuestas: ["Karl Marx", "Karl Marx y Friedrich Engels", "Friedrich Engels"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿Qué invento es atribuido a Alexander Graham Bell? 📞",
+    respuestas: ["Radio", "Teléfono", "Telégrafo"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿En qué año comenzó la Guerra Civil Española? ⚔️",
+    respuestas: ["1945", "1936", "1939"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿Cuál es el idioma más hablado del mundo? 🌐",
+    respuestas: ["Inglés", "Chino mandarín", "Español"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿Qué elemento químico tiene el símbolo 'O'? ⚗️",
+    respuestas: ["Oro", "Oxígeno", "Osmio"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿Quién pintó 'La última cena'? 🎨",
+    respuestas: ["Miguel Ángel", "Leonardo da Vinci", "Rafael"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿En qué año se estrenó la película 'El Padrino'? 🎥",
+    respuestas: ["1980", "1972", "1969"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿Cuál es la capital de España? 🏙️",
+    respuestas: ["Barcelona", "Madrid", "Sevilla"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿Quién dirigió la película 'Parásitos'? 🎬",
+    respuestas: ["Kim Ki-duk", "Bong Joon-ho", "Park Chan-wook"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿Cuántos países forman parte de la Unión Europea? 🇪🇺",
+    respuestas: ["28", "27", "30"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿Qué animal es conocido como 'el rey de la selva'? 🦁",
+    respuestas: ["Tigre", "León", "Elefante"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿Cuál es el planeta más grande del sistema solar? 🪐",
+    respuestas: ["Saturno", "Júpiter", "Neptuno"],
+    respuestaCorrecta: 2,
+  },
+  {
+    pregunta: "¿En qué año se fundó Google? 🌐",
+    respuestas: ["2000", "1998", "1995"],
+    respuestaCorrecta: 2,
+  },
 ];
 
 let puntos = 0;
