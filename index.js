@@ -66,7 +66,12 @@ function quiz(preguntaObj, index) {
       clearInterval(temporizador);
       rl.close();
       console.log("\n⏰ Tiempo agotado. Respuesta incorrecta.");
-      siguientePregunta(index);
+      if (puntos < 5) {
+        console.log("\n¡Has perdido! 😞 Inténtalo de nuevo.");
+        process.exit();
+      } else {
+        siguientePregunta(index);
+      }
     }
   }, 1000);
 
@@ -84,7 +89,12 @@ function quiz(preguntaObj, index) {
       );
     }
 
-    siguientePregunta(index);
+    if (puntos < 5) {
+      console.log("\n¡Has perdido! 😞 Inténtalo de nuevo.");
+      process.exit();
+    } else {
+      siguientePregunta(index);
+    }
   });
 }
 
@@ -99,3 +109,4 @@ function siguientePregunta(index) {
 }
 
 quiz(preguntas[0], 0);
+
