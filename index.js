@@ -41,10 +41,70 @@ const preguntas = [
     respuestas: ["René Descartes", "Sócrates", "Kant"],
     respuestaCorrecta: 1,
   },
+  {
+    pregunta: "¿Qué invento es atribuido a Alexander Graham Bell? 📞",
+    respuestas: ["Teléfono", "Telégrafo", "Radio"],
+    respuestaCorrecta: 1,
+  },
+  {
+    pregunta: "¿Cuál es el planeta más grande del sistema solar? 🪐",
+    respuestas: ["Júpiter", "Saturno", "Neptuno"],
+    respuestaCorrecta: 1,
+  },
+  {
+    pregunta: "¿En qué año cayó el Muro de Berlín? 🧱",
+    respuestas: ["1989", "1990", "1987"],
+    respuestaCorrecta: 1,
+  },
+  {
+    pregunta: "¿Qué elemento químico tiene el símbolo 'O'? ⚗️",
+    respuestas: ["Oxígeno", "Oro", "Osmio"],
+    respuestaCorrecta: 1,
+  },
+  {
+    pregunta: "¿Qué deporte practica Rafael Nadal? 🎾",
+    respuestas: ["Tenis", "Fútbol", "Baloncesto"],
+    respuestaCorrecta: 1,
+  },
+  {
+    pregunta: "¿Qué animal es conocido como 'el rey de la selva'? 🦁",
+    respuestas: ["León", "Tigre", "Elefante"],
+    respuestaCorrecta: 1,
+  },
+  {
+    pregunta: "¿En qué continente se encuentra Egipto? 🌍",
+    respuestas: ["África", "Asia", "Europa"],
+    respuestaCorrecta: 1,
+  },
+  {
+    pregunta: "¿Quién pintó 'La última cena'? 🎨",
+    respuestas: ["Leonardo da Vinci", "Miguel Ángel", "Rafael"],
+    respuestaCorrecta: 1,
+  },
+  {
+    pregunta: "¿Cuál es el idioma más hablado del mundo? 🌐",
+    respuestas: ["Chino mandarín", "Español", "Inglés"],
+    respuestaCorrecta: 1,
+  },
+  {
+    pregunta: "¿En qué país se encuentra la Torre Eiffel? 🗼",
+    respuestas: ["Francia", "Italia", "Alemania"],
+    respuestaCorrecta: 1,
+  },
+  {
+    pregunta: "¿Qué gas respiramos los humanos? 🌬️",
+    respuestas: ["Oxígeno", "Hidrógeno", "Nitrógeno"],
+    respuestaCorrecta: 1,
+  },
+  {
+    pregunta: "¿En qué año se fundó Google? 🌐",
+    respuestas: ["1998", "2000", "1995"],
+    respuestaCorrecta: 1,
+  },
 ];
 
 let puntos = 0;
-const tiempoPorPregunta = 10; // Tiempo en segundos para responder cada pregunta.
+const tiempoPorPregunta = 35; // Tiempo en segundos para responder cada pregunta.
 
 function quiz(preguntaObj, index) {
   console.log(`\nPregunta ${index + 1}: 🔥\n${preguntaObj.pregunta}`);
@@ -109,4 +169,3 @@ function siguientePregunta(index) {
 }
 
 quiz(preguntas[0], 0);
-
